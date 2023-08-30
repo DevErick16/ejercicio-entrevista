@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Wiki</title>
+</head>
+<body>
+    
+    <div class="search-container">
+    <select name="" id="searchOption">
+        <option value="id">Id del Pokemon</option>
+        <option value="name">Nombre del pokemon</option>
+    </select>
+    <div id="searchContainer">
+        <input type="number" id="idInput" placeholder="ID Pokemon" min="1" max="150">
+        <input type="text" id="nameInput" placeholder="Nombre Pokemon">
+        <button onclick="searchPokemon()">Buscar</button>
+    </div>
+
+        <div id="pokemonContainer">
+            <h2 id="namePokemon"></h2>
+            <img src="" alt="img de Pokemon" id="imagePokemon">
+            <button onclick="showDetails()" id="moreInf">Mas...</button>
+            <button>Añadir</button>
+        </div>
+
+        <div id="modal"> 
+            <button onclick="viewModal()">Cerrar</button>
+        </div>
+    </div>
+    <script src="mains.js"></script>
+</body>
+</html>
