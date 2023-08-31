@@ -19,12 +19,47 @@ body{
     font-family: 'Outfit', sans-serif;
     font-size: 18px;
 }
+.logo-container{
+    text-align: center;
+}
+.logo{
+    width: 300px;
+    height: 130px;
+}
+input, select{
+    background-color: #CCC;
+    color: #000;
+}
+.select-option {
+    color: var(--Very_dark_blue_main);
+    
+}
+.btn-buscar{
+    cursor: pointer;
+    margin-left: 10px;
+    cursor: poi;
+    width: 100px;
+    margin-bottom: 20px;
+    height: 20px;
+    border: none;
+    background-color: var(--Very_dark_blue_main);
+    color: white;
+    font-weight: 300;
+    box-shadow: -3px 3px 15px 0px var(--Very_dark_blue_line);
+}
+.search-container{
+    padding: 10px;
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    background-color: var(--Very_dark_blue_line);
+}
 .pokemon-container{
     background-color: var(--Very_dark_blue_card);
-    height: 500px;
+    height: 460px;
     width: 330px;
     border-radius: 15px;
-    margin: 60px auto 30px;
+    margin: 30px auto 30px;
     overflow: hidden;
     padding: 25px;
 }

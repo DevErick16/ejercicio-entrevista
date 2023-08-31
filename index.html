@@ -9,18 +9,19 @@
 <body>
     
     <div class="search-container">
-    <select name="" id="searchOption">
+    <select name="" id="searchOption" class="select-option">
         <option value="id">Id del Pokemon</option>
         <option value="name">Nombre del pokemon</option>
     </select>
+    <input class="input-text" type="number" id="idInput" placeholder="ID Pokemon" min="1" max="150" >
+    <input type="text" id="nameInput" placeholder="Nombre Pokemon" class="input-id">
+    <button onclick="searchPokemon()" class="btn-buscar">Buscar</button>
+
     </div>
 
-    <div id="searchContainer">
-        <input type="number" id="idInput" placeholder="ID Pokemon" min="1" max="150">
-        <input type="text" id="nameInput" placeholder="Nombre Pokemon">
-        <button onclick="searchPokemon()">Buscar</button>
-    </div>
-
+        <div class="logo-container">
+            <img src="sources/612ce4761b9679000402af1c.png" alt="" class="logo">
+        </div>
         <div id="pokemonContainer" class="pokemon-container">
             <div class="image-container">
                 <img src="sources/pokebola.png" alt="img de Pokemon" id="imagePokemon" class="img-pokemon">
