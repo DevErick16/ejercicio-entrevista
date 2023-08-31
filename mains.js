@@ -18,6 +18,7 @@ async function searchPokemon(){
 
     document.getElementById('namePokemon').textContent = data.name + ' #' + data.id;
     document.getElementById('imagePokemon').src = data.sprites.front_default;
+    document.getElementById('idInput').value = data.id
 
     
 }
