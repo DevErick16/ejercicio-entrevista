@@ -16,7 +16,7 @@ async function searchPokemon(){
 
     const data = await getData(valueInput);
 
-    document.getElementById('namePokemon').textContent = data.name;
+    document.getElementById('namePokemon').textContent = data.name + ' #' + data.id;
     document.getElementById('imagePokemon').src = data.sprites.front_default;
 
     
@@ -27,9 +27,8 @@ function validateInput(){
     return valueInput;
 }
 function showDetails(){
+    const contenedor = document.getElementById('pokemonContainer');
     let valueInput = validateInput();
-    const inputValue = document.getElementById('idInput').value
-
     getData(valueInput).then(pokemonData => {
         const modal = document.getElementById('modal');
         modal.innerHTML= '';
@@ -74,9 +73,13 @@ function showDetails(){
             modal.appendChild(abilitiesList);
             modal.appendChild(statsHeading);
             modal.appendChild(statsList);
+            contenedor.style.height= '1000px';
     })
 }
-function addToTable() {
+async function addToTable() {
+    const contenedor = document.getElementById('pokemonContainer');
+    let valueInput = validateInput();
+    const data = await getData(valueInput);
     const pokemonName = document.getElementById('namePokemon').textContent;
     const pokemonID = document.getElementById('idInput').value;
 
@@ -84,18 +87,20 @@ function addToTable() {
     const tableRows = document.querySelectorAll('#pokemonTable tbody tr');
     for (const row of tableRows) {
         const existingPokemonName = row.querySelector('td:first-child').textContent;
-        if (existingPokemonName === pokemonName) {
+        if (existingPokemonName === pokemonID) {
             alert('¡Este Pokémon ya está en la tabla!');
             return;
         }
+        
     }
 
     // Si no existe, agregar el Pokémon a la tabla
     if (tableRows.length < 6) {
-        const newRow = `<tr><td>${pokemonName}</td><td>${pokemonID}</td></tr>`;
+        const newRow = `<tr><td>${data.id}</td><td>${pokemonName}</td></tr>`;
         const tableBody = document.querySelector('#pokemonTable tbody');
         tableBody.innerHTML += newRow;
     } else {
         alert('¡La tabla ya tiene el máximo de 6 Pokémon!');
     }
+    contenedor.style.height= '1100px';
 }

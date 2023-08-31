@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Fjalla+One&family=Inter:wght@400;700&family=Karla:wght@700&family=Outfit:wght@300;400;600&display=swap');
+:root{
+    --Soft_blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very_dark_blue_main: hsl(217, 54%, 11%);
+    --Very_dark_blue_card: hsl(216, 50%, 16%);
+    --Very_dark_blue_line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+    --Blue: hsl(223, 87%, 63%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--White);
+}
+body{
+    background-color: var(--Very_dark_blue_main);
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+}
+.pokemon-container{
+    background-color: var(--Very_dark_blue_card);
+    height: 500px;
+    width: 330px;
+    border-radius: 15px;
+    margin: 60px auto 30px;
+    overflow: hidden;
+    padding: 25px;
+}
+.img-pokemon{
+    background-image: url(images/image-equilibrium.jpg);
+    background-size: cover;
+    height: 275px;
+    width: 275px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.name-pokemon{
+    font-size: 1.2em;
+    font-weight: 400;
+    color: var(--White);
+    margin-bottom: 15px;
+}
+
+.name-pokemon:hover{
+    color: var(--Cyan);
+    cursor: pointer;
+}
+.hiden {
+    hidde: none;
+}
+.btn-more {
+    cursor: pointer;
+    margin-left: 40px;
+    cursor: poi;
+    width: 200px;
+    margin-bottom: 20px;
+    height: 40px;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--Very_dark_blue_main);
+    color: white;
+    font-weight: 300;
+    box-shadow: -3px 3px 15px 0px var(--Very_dark_blue_line);
+
+}
+.name-pokemon{
+    text-align: center;
+}
+btn-more:hover{
+    cursor: pointer;
+}
+h2{
+
+    font-size: 30px;
+}
+ul, li{
+    font-size: 18px;
+}
+ul{
+    margin-left: 30px;
+    margin-bottom: 10px;
+}

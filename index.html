@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Pokemon Wiki</title>
 </head>
 <body>
@@ -20,23 +21,30 @@
         <button onclick="searchPokemon()">Buscar</button>
     </div>
 
-        <div id="pokemonContainer">
-            <h2 id="namePokemon"></h2>
-            <img src="" alt="img de Pokemon" id="imagePokemon">
-            <button onclick="showDetails()" id="moreInf">Mas...</button>
-            <button onclick="addToTable()">Añadir a la pokebola</button>
-        </div>
+        <div id="pokemonContainer" class="pokemon-container">
+            <div class="image-container">
+                <img src="sources/pokebola.png" alt="img de Pokemon" id="imagePokemon" class="img-pokemon">
+            </div>
+            <h2 id="namePokemon" class="name-pokemon"></h2>
+
+            <button onclick="showDetails()" id="moreInf" class="btn-more">Mas informacion</button>
+
+            <button onclick="addToTable()" class="btn-more">Añadir a la pokebola</button>
+        
 
         <div id="modal" class="hidden"> 
+            <!--
             <button onclick="closeModal()">Cerrar</button>
+            -->
         </div>
 
         <div>
+        </div>
             <table id="pokemonTable">
                 <thead>
                     <tr>
-                        <th>Nombre</th>
                         <th>Id</th>
+                        <th>Nombre</th>
                     </tr>
                 </thead>
                 <tbody></tbody>
