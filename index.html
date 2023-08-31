@@ -12,6 +12,8 @@
         <option value="id">Id del Pokemon</option>
         <option value="name">Nombre del pokemon</option>
     </select>
+    </div>
+
     <div id="searchContainer">
         <input type="number" id="idInput" placeholder="ID Pokemon" min="1" max="150">
         <input type="text" id="nameInput" placeholder="Nombre Pokemon">
@@ -22,13 +24,25 @@
             <h2 id="namePokemon"></h2>
             <img src="" alt="img de Pokemon" id="imagePokemon">
             <button onclick="showDetails()" id="moreInf">Mas...</button>
-            <button>Añadir</button>
+            <button onclick="addToTable()">Añadir a la pokebola</button>
         </div>
 
-        <div id="modal"> 
-            <button onclick="viewModal()">Cerrar</button>
+        <div id="modal" class="hidden"> 
+            <button onclick="closeModal()">Cerrar</button>
         </div>
-    </div>
+
+        <div>
+            <table id="pokemonTable">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Id</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    
     <script src="mains.js"></script>
 </body>
 </html>
