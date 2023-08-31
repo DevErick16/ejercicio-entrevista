@@ -133,3 +133,9 @@ ul{
     margin-top: -500px;
     text-align: left;
 }
+@media (max-width: 1172px) {
+    .footer-containerR .footer-image,
+    .footer-containerL .footer-image {
+        display: none;
+    }
+}
